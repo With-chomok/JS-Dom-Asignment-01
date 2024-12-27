@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="bg-gray-300 min-h-screen flex items-center justify-center">
+
+  <div class="w-96 bg-white shadow-2xl rounded-lg p-6">
+    <h1 class="text-3xl font-bold text-center mb-4">To-Do List</h1>
+
+
+    <div class="flex gap-2 mb-4">
+
+
+      <input type="text" id="todoInput" placeholder="Enter a new TO DO..." class="flex-grow p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+
+      <button id="addTodoBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">Add</button>
+
+
+    </div>
+      <ul id="todoList" class="space-y-2"></ul>
+    </div>
+
+
+
+  <script defer src="./script.js"></script>
 </body>
 </html>
