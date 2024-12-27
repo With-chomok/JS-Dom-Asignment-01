@@ -42,3 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }, { once: true });
       });
+
+       // Add Delete functionality
+    listItem.querySelector(".deleteBtn").addEventListener("click", () => {
+        todoList.removeChild(listItem);
+      });
+  
+      todoList.appendChild(listItem);
+      todoInput.value = "";
+    };
+  
