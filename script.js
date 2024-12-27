@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       todoInput.value = "";
     };
   
+
+
+    
     // Event Listeners
   addTodoBtn.addEventListener("click", addTodo);
 
