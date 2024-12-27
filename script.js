@@ -52,3 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
       todoInput.value = "";
     };
   
+    // Event Listeners
+  addTodoBtn.addEventListener("click", addTodo);
+
+  todoInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      addTodo();
+    }
+  });
+});
