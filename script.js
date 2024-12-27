@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const addTodo = () => {
     const todoText = todoInput.value.trim();
     if (todoText === "") {
-      alert("Please enter a task!");
+      alert("Please Enter Your New Task!");
+      
       return;
     }
 
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-    
+
     // Event Listeners
   addTodoBtn.addEventListener("click", addTodo);
 
