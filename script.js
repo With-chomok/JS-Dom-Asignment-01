@@ -22,3 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="editBtn text-blue-500 hover:underline">Edit</button>
       <button class="deleteBtn text-red-500 hover:underline">Remove</button>
     `;
+
+
+
+    // Add Edit remove functionality codes
+    listItem.querySelector(".editBtn").addEventListener("click", () => {
+        const span = listItem.querySelector("span");
+        const currentText = span.textContent;
+        span.innerHTML = `<input type="text" value="${currentText}" class="p-1 border rounded-md">`;
+        listItem.querySelector(".editBtn").textContent = "Save";
+  
+        listItem.querySelector(".editBtn").addEventListener("click", () => {
+          const updatedText = span.querySelector("input").value.trim();
+          if (updatedText === "") {
+            alert("Task cannot be empty!");
+          } else {
+            span.textContent = updatedText;
+            listItem.querySelector(".editBtn").textContent = "Edit";
+          }
+        }, { once: true });
+      });
